@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.fathens.cordova.okhttp"
+    version="1.0.0">
+
+    <name>OkHttp Plugin</name>
+    
+    <description>
+		Cordova Plugin for Using OkHttpClient
+    </description>
+    
+    <license>Apache 2.0</license>
+    
+    <engines>
+    	<engine name="cordova" version=">=3.5.0" />
+    </engines>
+	
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="OkHttpPlugin">
+                <param name="android-package" value="org.fathens.cordova.okhttp.InitOkHttp" />
+            </feature>
+        </config-file>
+
+        <!-- cordova plugin src files -->
+        <source-file src="platforms/android/src/org/fathens/cordova/okhttp/InitOkHttp.java" target-dir="src/org/fathens/cordova/okhttp" />
+		
+    </platform>
+</plugin>
