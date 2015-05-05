@@ -21,6 +21,7 @@
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="OkHttpPlugin">
                 <param name="android-package" value="org.fathens.cordova.okhttp.InitOkHttp" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
