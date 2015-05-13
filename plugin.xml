@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="org.fathens.cordova.okhttp"
-    version="1.0.0">
+    version="1.1.0">
 
     <name>OkHttp Plugin</name>
     
@@ -21,6 +21,7 @@
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="OkHttpPlugin">
                 <param name="android-package" value="org.fathens.cordova.okhttp.InitOkHttp" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
