@@ -15,11 +15,16 @@ import com.squareup.okhttp.OkHttpClient;
 
 public class InitOkHttp extends CordovaPlugin {
     private static final String TAG = "InitOkHttp";
+    private static boolean isInitialized = false;
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 	super.initialize(cordova, webView);
-	initHttp();
+
+        if (!isInitialized) {
+            initHttp();
+            isInitialized = true;
+        }
     }
 
     public void initHttp() {
